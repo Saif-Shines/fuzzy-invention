@@ -12,10 +12,10 @@ test(' subtract adds numbers', () => {
   expect(result).toBe(expected);
 });
 
-function test(title, callback) {
+async function test(title, callback) {
   try {
-    callback();
-    console.log(`✅ Passed: ${title}`);
+    await callback();
+    console.log(`✅  Passed: ${title}`);
   } catch (error) {
     console.log(`❌ Failed: ${title}`);
     console.log(error);
