@@ -4,6 +4,7 @@
   "description": "Rebuild Mock from scratch",
   "main": "index.js",
   "private": true,
+  "dependencies": {},
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
