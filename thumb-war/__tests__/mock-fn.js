@@ -1,11 +1,11 @@
-const assert = require('assert');
 const thumbWar = require('../thumb-war');
 const utils = require('../utils');
 
 const originalGetWinner = utils.getWinner;
-utils.getWinner = (p1, p2) => p1;
+utils.getWinner = jest.fn((p1, p2) => p1);
 
 const winner = thumbWar('Donald Duck', 'Amitabh B');
-assert.strictEqual(winner, 'Donald Duck');
+expect(winner).toBe('Donald Duck');
+
 
 utils.getWinner = originalGetWinner;
